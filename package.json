@@ -1,6 +1,6 @@
 {
   "name": "@yiliya/aquarium",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An aquarium for your terminal.",
   "keywords": [
     "aquarium",
@@ -12,6 +12,14 @@
   ],
   "license": "MIT",
   "author": "Yiliya",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eligibilityy/aquarium.git"
+  },
+  "homepage": "https://github.com/eligibilityy/aquarium#readme",
+  "bugs": {
+    "url": "https://github.com/eligibilityy/aquarium/issues"
+  },
   "type": "module",
   "bin": {
     "aquarium": "dist/cli.js"

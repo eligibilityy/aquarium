@@ -1,0 +1,49 @@
+{
+  "name": "@yiliya/aquarium",
+  "version": "0.1.0",
+  "description": "An aquarium for your terminal.",
+  "keywords": [
+    "aquarium",
+    "ascii",
+    "terminal",
+    "tui",
+    "ink",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "Yiliya",
+  "type": "module",
+  "bin": {
+    "aquarium": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.tsx",
+    "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
+    "preview": "tsx scripts/preview.tsx",
+    "gallery": "tsx scripts/gallery.tsx",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "typecheck": "tsc",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "chalk": "^6.0.1",
+    "ink": "^8.0.0",
+    "react": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

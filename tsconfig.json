@@ -1,0 +1,16 @@
+{
+  // Used by your editor and `npm run typecheck`: checks everything, emits nothing.
+  // `npm run build` uses tsconfig.build.json, which extends this one.
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
+    "types": ["node"],
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src", "scripts"]
+}
